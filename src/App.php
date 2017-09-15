@@ -11,8 +11,10 @@ class App extends Yii
      */
     public static function powered()
     {
-        return \Yii::t('yii', 'Powered by {bulldozer}', [
+        return \Yii::t('bulldozer', 'Powered by {bulldozer}', [
             'bulldozer' => '<a href="https://webdragons.ru/" rel="external">Bulldozer CMF</a>'
         ]);
     }
 }
+
+App::setAlias('@bulldozer', __DIR__);

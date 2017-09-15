@@ -5,6 +5,7 @@ namespace bulldozer\components;
 use bulldozer\App;
 use bulldozer\base\BackendModule;
 use InvalidArgumentException;
+use Yii;
 use yii\base\Component;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
@@ -29,7 +30,7 @@ class BackendMenu extends Component
         parent::init();
 
         $this->menuItems[] = [
-            'label' => 'Главная',
+            'label' => Yii::t('bulldozer', 'Home'),
             'icon' => 'fa fa-home',
             'url' => Url::home(),
         ];
@@ -50,7 +51,7 @@ class BackendMenu extends Component
         }
 
         $this->menuItems[] = [
-            'label' => 'Вернуться на сайт',
+            'label' => Yii::t('bulldozer', 'Return to site'),
             'icon' => 'fa fa-undo',
             'url' => '/',
         ];
