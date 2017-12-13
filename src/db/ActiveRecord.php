@@ -11,7 +11,7 @@ class ActiveRecord extends \yii\db\ActiveRecord
     {
         $rules = [];
 
-        foreach ($this->getAttributes() as $attribute) {
+        foreach ($this->getAttributes() as $attribute => $value) {
             $rules[] = [$attribute, 'safe'];
         }
 
