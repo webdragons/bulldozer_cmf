@@ -2,6 +2,12 @@
 
 namespace bulldozer\db;
 
+use bulldozer\App;
+
+/**
+ * Class ActiveRecord
+ * @package bulldozer\db
+ */
 class ActiveRecord extends \yii\db\ActiveRecord
 {
     /**
@@ -16,5 +22,17 @@ class ActiveRecord extends \yii\db\ActiveRecord
         }
 
         return $rules;
+    }
+
+    /**
+     * @param array $row
+     * @return object|static
+     * @throws \yii\base\InvalidConfigException
+     */
+    public static function instantiate($row)
+    {
+        return App::createObject([
+            'class' => get_called_class(),
+        ]);
     }
 }

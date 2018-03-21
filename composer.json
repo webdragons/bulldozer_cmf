@@ -1,8 +1,8 @@
 {
   "name": "bulldozer/bulldozer",
   "require": {
-    "php": "7.1.*",
-    "yiisoft/yii2": "~2.0.5"
+    "php": ">=7.1",
+    "yiisoft/yii2": "~2.0.15"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.4"
